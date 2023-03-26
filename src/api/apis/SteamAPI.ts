@@ -107,6 +107,10 @@ export class SteamAPI extends APIModel {
 			genres: result.genres?.map((x: any) => x.description) ?? [],
 			onlineRating: Number.parseFloat(result.metacritic?.score ?? 0),
 			image: result.header_image ?? '',
+			screenshots: result.screenshots?.map((x: any) => x.path_full) ?? [],
+			movies: result.movies?.map((x: any) => x.webm.max) ?? [],
+			short_description: result.short_description ?? '',
+			metacritic_url: result.metacritic.url ?? '',
 
 			released: !result.release_date?.comming_soon,
 			releaseDate: new Date(result.release_date?.date).toLocaleDateString() ?? 'unknown',

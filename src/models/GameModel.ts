@@ -6,6 +6,10 @@ export class GameModel extends MediaTypeModel {
 	genres: string[];
 	onlineRating: number;
 	image: string;
+	screenshots: string[];
+	movies: string[];
+	short_description: string;
+	metacritic_url: string;
 
 	released: boolean;
 	releaseDate: string;
@@ -21,6 +25,10 @@ export class GameModel extends MediaTypeModel {
 		this.genres = undefined;
 		this.onlineRating = undefined;
 		this.image = undefined;
+		this.screenshots = undefined;
+		this.short_description = undefined;
+		this.movies = undefined;
+		this.metacritic_url = undefined;
 		this.released = undefined;
 		this.releaseDate = undefined;
 		this.userData = {
